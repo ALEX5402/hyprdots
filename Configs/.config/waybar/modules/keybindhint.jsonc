@@ -1,6 +1,5 @@
-    "custom/keybindhint": {
-        "format": " ",
-        "rotate": ${r_deg},
-        "on-click": "Hyprdots show binds",
-    },
-
+"custom/keybindhint": {
+    "format": " ",
+    "rotate": 0,
+    "on-click": "${ScrDir}/keybinds_hint.sh"
+},
