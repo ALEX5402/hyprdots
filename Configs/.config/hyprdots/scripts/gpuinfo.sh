@@ -171,7 +171,8 @@ generate_json() {
                                   fi
   fi
   if [[ -n "${power_discharge}" ]] && [[ "${power_discharge}" != "0" ]]; then tooltip_parts["\n Power Discharge: "]="${power_discharge} W" ;fi
-
+ 
+ 
   for key in "${!tooltip_parts[@]}"; do
     local value="${tooltip_parts[${key}]}"
     if [[ -n "${value}" && "${value}" =~ [a-zA-Z0-9] ]]; then
@@ -191,8 +192,8 @@ for file in /sys/class/power_supply/BAT*/power_now; do
     [[ -f "${file}" ]] && power_discharge=$(awk '{print $1*10^-6 ""}' "${file}") && break
 done
 [[ -z "${power_discharge}" ]] && for file in /sys/class/power_supply/BAT*/current_now; do
-    [[ -e "${file}" ]] && power_discharge=$(awk -v current="$(cat "${file}")" -v voltage="$(cat "${file/current_now/voltage_now}")" 'BEGIN {print (current * voltage) / 10^12 ""}') && break
-done
+   [[ -e "${file}" ]] && power_discharge=$(awk -v current="$(cat "${file}")" -v voltage="$(cat "${file/current_now/voltage_now}")" 'BEGIN {print (current * voltage) / 10^12 ""}') && break
+   done
 # power_limit=$()
 utilization=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1" "}')
 current_clock_speed=$(awk '{sum += $1; n++} END {if (n > 0) print sum / n / 1000 ""}' /sys/devices/system/cpu/cpufreq/policy*/scaling_cur_freq)

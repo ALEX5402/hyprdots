@@ -43,6 +43,12 @@ polkit-kde-agent                                       # authentication agent
 xdg-desktop-portal-hyprland                            # xdg desktop portal for hyprland
 pacman-contrib                                         # for system update check
 python-pyamdgpuinfo                                    # for amd gpu info
+libva-mesa-driver                                      # mesa drivers amd only
+libva-utils                                            #vaapi utils for amd only
+obs-vaapi                                              #obs vaapi support
+emote                                                  # emoji picker
+thunar-archive-plugin                                  # thunar archive plugin
+nemo-fileroller                                        # nemo archive plugin
 parallel                                               # for parallel processing
 jq                                                     # for json processing
 imagemagick                                            # for image processing
@@ -64,10 +70,14 @@ qt6-wayland                                            # wayland support in qt6
 firefox                                                # browser
 kitty                                                  # terminal
 dolphin                                                # kde file manager
+thunar
+nemo
+arqiver
 ark                                                    # kde file archiver
-vim                                                    # terminal text editor
-visual-studio-code-bin                                 # ide text editor
-
+neoim                                                    # terminal text editor
+kate                                                   # ide text editor
+nemo                                                   # file manager
+obs-studio                                             # screen recorder
 
 # --------------------------------------------------- // Shell
 eza|zsh                                                # file lister for zsh
@@ -79,6 +89,4 @@ neofetch                                               # fetch tool
 pokemon-colorscripts-git|zsh                           # display pokemon sprites
 
 
-# --------------------------------------------------- // Hyprdots
-hyprdots-ctl                                           # cli tool to manage hyprdots
 

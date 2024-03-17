@@ -1,23 +1,26 @@
 ###### *<div align = right><sub>// design by t2</sub></div>*
-<div align = center><img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyprdots_banner.png"><br><br>
+<div align = center><img src="https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/hyprdots_banner.png"><br><br>
 
 &ensp;[<kbd> <br> Install <br> </kbd>](#Installation)&ensp;
 &ensp;[<kbd> <br> Themes <br> </kbd>](#Themes)&ensp;
 &ensp;[<kbd> <br> Styles <br> </kbd>](#Styles)&ensp;
 &ensp;[<kbd> <br> Keybindings <br> </kbd>](#Keybindings)&ensp;
 &ensp;[<kbd> <br> Youtube <br> </kbd>](#Youtube)&ensp;
-&ensp;[<kbd> <br> Wiki <br> </kbd>](https://github.com/prasanthrangan/hyprdots/wiki)&ensp;
+&ensp;[<kbd> <br> Wiki <br> </kbd>](https://github.com/alex5402/hyprdots/wiki)&ensp;
 <br><br><br><br></div>
+
+![image](https://github.com/ALEX5402/hyprdots/assets/76860596/d5d718e2-fdec-4750-a0e0-29b1c374d33d)
+![image](https://github.com/ALEX5402/hyprdots/assets/76860596/e7dbde4e-af5b-4ff0-9230-22a53ba842e1)
 
 
 <https://user-images.githubusercontent.com/106020512/235429801-e8b8dae2-c1ad-4e23-9aa2-b1edb6cabe99.mp4>
 
 <p align="center">
-    <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_1.png" /> <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_2.png" />
-    <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_3.png" /> <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_4.png" />
+    <img align="center" width="49%" src="https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/showcase_1.png" /> <img align="center" width="49%" src="https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/showcase_2.png" />
+    <img align="center" width="49%" src="https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/showcase_3.png" /> <img align="center" width="49%" src="https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/showcase_4.png" />
 </p>
 
-https://github.com/prasanthrangan/hyprdots/assets/106020512/c995699a-299c-4a8e-99d4-71aa3d68eb93
+https://github.com/alex5402/hyprdots/assets/106020512/c995699a-299c-4a8e-99d4-71aa3d68eb93
 
 
 <div align = right> <br><br>
@@ -32,6 +35,7 @@ For Debian, please refer **Senshi111**'s version [here](https://github.com/Sensh
 Checkout **Ksk**'s [video](https://www.youtube.com/watch?v=mb8h1-LB9K0) for full installation walkthrough.
 
 > [!IMPORTANT]
+> some config files need to copy manually if there are not there so please check the configs after install
 > Install script will auto-detect nvidia card and install nvidia-dkms drivers for your kernel.
 > So please ensure that your Nvidia card supports [dkms](https://wiki.archlinux.org/title/NVIDIA) drivers and hyprland.
 
@@ -43,7 +47,12 @@ After a minimal Arch install (with grub and systemd), clone and execute -
 
 ```shell
 pacman -Sy git
-git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
+git clone https://github.com/ALEX5402/Hyprdots-ctl
+cd Hyprdots-ctl
+cd aur
+makepkg -si
+cd ~
+git clone --depth 1 https://github.com/alex5402/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts
 ./install.sh
 ```
@@ -55,7 +64,7 @@ cd ~/Hyprdots/Scripts
 >```
 
 Please reboot after the install script completes and takes you to sddm login screen (or black screen) for the first time.
-For more details, please refer [installation wiki](https://github.com/prasanthrangan/hyprdots/wiki/Installation)
+For more details, please refer [installation wiki](https://github.com/alex5402/hyprdots/wiki/Installation)
 
 ### Updating
 To update Hyprdots you will need to pull the latest changes from github and restore the configs by doing -
@@ -78,13 +87,13 @@ git pull
 
 ## Themes
 
-To create your own custom theme, please refer [theming wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming)
+To create your own custom theme, please refer [theming wiki](https://github.com/alex5402/hyprdots/wiki/Theming)
 
 > [!TIP]
-> You can install/browse/create/maintain/share additional themes (ex. [Synth-Wave](https://github.com/prasanthrangan/hyprdots-mod)) using themepatcher.
-> For more details please refer [themepatcher wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming#theme-patcher).
+> You can install/browse/create/maintain/share additional themes (ex. [Synth-Wave](https://github.com/alex5402/hyprdots-mod)) using themepatcher.
+> For more details please refer [themepatcher wiki](https://github.com/alex5402/hyprdots/wiki/Theming#theme-patcher).
 
-<br><div align="center"><table><tr><td><img width="60" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyprdots_logo.png"></td><td>
+<br><div align="center"><table><tr><td><img width="60" src="https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/hyprdots_logo.png"></td><td>
 
 [![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](#-Catppuccin-Mocha)
 [![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](#-Catppuccin-Latte)
@@ -100,45 +109,45 @@ To create your own custom theme, please refer [theming wiki](https://github.com/
 
 > #### ***<div align = right>// Catppuccin-Mocha</div>***
 
-![Catppuccin-Mocha#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_mocha_1.png)
-![Catppuccin-Mocha#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_mocha_2.png)<br><br>
+![Catppuccin-Mocha#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_mocha_1.png)
+![Catppuccin-Mocha#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_mocha_2.png)<br><br>
 
 > #### ***<div align = right>// Catppuccin-Latte</div>***
 
-![Catppuccin-Latte#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_latte_1.png)
-![Catppuccin-Latte#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_latte_2.png)<br><br>
+![Catppuccin-Latte#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_latte_1.png)
+![Catppuccin-Latte#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_latte_2.png)<br><br>
 
 > #### ***<div align = right>// Decay-Green</div>***
-![Decay-Green#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_decay_1.png)
-![Decay-Green#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_decay_2.png)<br><br>
+![Decay-Green#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_decay_1.png)
+![Decay-Green#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_decay_2.png)<br><br>
 
 > #### ***<div align = right>// Rosé-Pine</div>***
-![Rosé-Pine#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_rosine_1.png)
-![Rosé-Pine#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_rosine_2.png)<br><br>
+![Rosé-Pine#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_rosine_1.png)
+![Rosé-Pine#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_rosine_2.png)<br><br>
 
 > #### ***<div align = right>// Tokyo-Night</div>***
-![Tokyo-Night#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_tokyo_1.png)
-![Tokyo-Night#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_tokyo_2.png)<br><br>
+![Tokyo-Night#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_tokyo_1.png)
+![Tokyo-Night#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_tokyo_2.png)<br><br>
 
 > #### ***<div align = right>// Material-Sakura</div>***
-![Material-Sakura#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_maura_1.png)
-![Material-Sakura#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_maura_2.png)<br><br>
+![Material-Sakura#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_maura_1.png)
+![Material-Sakura#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_maura_2.png)<br><br>
 
 > #### ***<div align = right>// Graphite-Mono</div>***
-![Graphite-Mono#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_graph_1.png)
-![Graphite-Mono#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_graph_2.png)<br><br>
+![Graphite-Mono#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_graph_1.png)
+![Graphite-Mono#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_graph_2.png)<br><br>
 
 > #### ***<div align = right>// Cyberpunk-Edge</div>***
-![Cyberpunk-Edge#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_cedge_1.png)
-![Cyberpunk-Edge#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_cedge_2.png)<br><br>
+![Cyberpunk-Edge#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_cedge_1.png)
+![Cyberpunk-Edge#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_cedge_2.png)<br><br>
 
 > #### ***<div align = right>// Frosted-Glass by T-crypt</div>***
-![Frosted-Glass#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_frosted_1.png)
-![Frosted-Glass#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_frosted_2.png)<br><br>
+![Frosted-Glass#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_frosted_1.png)
+![Frosted-Glass#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_frosted_2.png)<br><br>
 
 > #### ***<div align = right>// Gruvbox-Retro by T-crypt</div>***
-![Gruvbox-Retro#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_gruvbox_1.png)
-![Gruvbox-Retro#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_gruvbox_2.png)
+![Gruvbox-Retro#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_gruvbox_1.png)
+![Gruvbox-Retro#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_gruvbox_2.png)
 
 </td></table>
 
@@ -152,39 +161,39 @@ To create your own custom theme, please refer [theming wiki](https://github.com/
 
 | Theme Select |
 | :-: |
-| ![Theme Select](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_select.png) |
+| ![Theme Select](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/theme_select.png) |
 
 | Wallpaper Select |
 | :-: |
-| ![Wallpaper Select](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/walls_select.png) |
+| ![Wallpaper Select](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/walls_select.png) |
 
 | Launcher Style Select |
 | :-: |
-| ![Launcher Style Select](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_sel.png) |
+| ![Launcher Style Select](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_sel.png) |
 
 | Launcher Styles |
 | :-: |
-| ![rofi style#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_1.png) |
-| ![rofi style#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_2.png) |
-| ![rofi style#3](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_3.png) |
-| ![rofi style#4](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_4.png) |
-| ![rofi style#5](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_5.png) |
-| ![rofi style#6](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_6.png) |
-| ![rofi style#7](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_7.png) |
-| ![rofi style#8](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_8.png) |
+| ![rofi style#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_1.png) |
+| ![rofi style#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_2.png) |
+| ![rofi style#3](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_3.png) |
+| ![rofi style#4](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_4.png) |
+| ![rofi style#5](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_5.png) |
+| ![rofi style#6](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_6.png) |
+| ![rofi style#7](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_7.png) |
+| ![rofi style#8](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/rofi_style_8.png) |
 
 | Wlogout Menu |
 | :-: |
-| ![Wlogout Menu#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_1.png) |
-| ![Wlogout Menu#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_2.png) |
+| ![Wlogout Menu#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/wlog_style_1.png) |
+| ![Wlogout Menu#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/wlog_style_2.png) |
 
 | Game Launchers |
 | :-: |
-| ![Game Launchers#1](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_1.png) |
-| ![Game Launchers#2](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_2.png) |
-| ![Game Launchers#3](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_3.png) |
-| ![Game Launchers#4](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_4.png) |
-| ![Game Launchers#5](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_5.png) |
+| ![Game Launchers#1](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/game_launch_1.png) |
+| ![Game Launchers#2](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/game_launch_2.png) |
+| ![Game Launchers#3](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/game_launch_3.png) |
+| ![Game Launchers#4](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/game_launch_4.png) |
+| ![Game Launchers#5](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/game_launch_5.png) |
 
 
 <div align = right> <br><br>
@@ -251,7 +260,12 @@ To create your own custom theme, please refer [theming wiki](https://github.com/
 
 <table><tr><td><code>p</code><br><code>l</code><br><code>a</code><br><code>y</code><br><code>l</code><br><code>i</code><br><code>s</code><br><code>t</code></td><td>
 
-[![YouTube playlist thumbnail](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/yt_playlist.png)](https://www.youtube.com/watch?v=_nyStxAI75s&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY)
+[![YouTube playlist thumbnail](https://raw.githubusercontent.com/alex5402/hyprdots/main/Source/assets/yt_playlist.png)](https://www.youtube.com/watch?v=_nyStxAI75s&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY)
 
 </td></tr></table>
+
+## Addons
+
+[Synth-Wave-theme](https://github.com/ALEX5402/Synth-Wave-theme)
+ 
 
