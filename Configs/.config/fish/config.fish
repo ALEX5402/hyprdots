@@ -143,7 +143,7 @@ alias vim 'nvim'
 
 alias print-fingerprint-jar 'keytool -printcert -jarfile'
 alias wayshere 'sudo mount --bind ~/Androidshere ~/.local/share/waydroid/data/media/0/Documents'
-alias waystart './waydroid.sh'
+alias waystart 'bash ~/waydroid.sh'
 alias fish 'neofetch'
 
 alias warpc 'warp-cli connect'
