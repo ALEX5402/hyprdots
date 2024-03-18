@@ -103,13 +103,14 @@ function copy
     end
 end
 
-# Cleanup local orphaned packages
+# Cleanup local orphaned packages with cache
 function cleanup
+     sudo pacman -Sc
+     paru -Sc
     while pacman -Qdtq
         sudo pacman -R (pacman -Qdtq)
     end
 end
-
 ## Useful aliases
 
 # Replace ls with eza
