@@ -7,11 +7,10 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 ShowSelectionToggle=false
 ShowStatusBar=false
 Version=202
-ViewPropsTimestamp=2023,4,26,16,58,48.324
+ViewPropsTimestamp=2024,3,18,21,52,11.417
 
 [IconsMode]
 MaximumTextLines=1
-PreviewSize=112
 
 [InformationPanel]
 dateFormat=ShortFormat
@@ -29,7 +28,7 @@ ToolBarsMovable=Disabled
 
 [MainWindow][Toolbar mainToolBar]
 IconSize=16
-ToolButtonStyle=IconOnly
+ToolButtonStyle=TextUnderIcon
 
 [PlacesPanel]
 IconSize=16
