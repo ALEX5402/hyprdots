@@ -56,6 +56,11 @@ qt5-imageformats                                       # for dolphin image thumb
 ffmpegthumbs                                           # for dolphin video thumbnails
 kde-cli-tools                                          # for dolphin file type defaults
 hypridle                                               # idle manager
+kservice5                                              # fix dolphin open with menu
+kdbusaddons5                                           # fix dolphin open with menu
+kfilemetadata5                                         # fix dolphin open with menu
+kconfig5                                               # fix dolphin open with menu
+kcoreaddons5                                           # fix dolphin open with menu
 
 
 # --------------------------------------------------- // Theming
@@ -72,12 +77,10 @@ firefox                                                # browser
 kitty                                                  # terminal
 dolphin                                                # kde file manager
 thunar
-nemo
-arqiver
 ark                                                    # kde file archiver
 neoim                                                    # terminal text editor
 kate                                                   # ide text editor
-nemo                                                   # file manager
+dolphin                                                   # file manager
 obs-studio                                             # screen recorder
 
 # --------------------------------------------------- // Shell
