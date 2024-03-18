@@ -3,7 +3,7 @@
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 10px;
+    font-size: 11px;
     min-height: 10px;
 }
 
@@ -109,6 +109,7 @@ tooltip {
 #custom-updates,
 #custom-wallchange,
 #custom-wbar,
+#custom-weather,
 #window,
 #workspaces,
 #custom-l_end,
