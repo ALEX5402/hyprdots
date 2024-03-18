@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SKlauncher
+Comment=Secure and modern Minecraft Launcher
+Exec=sklauncher
+Icon=/usr/share/applications/minecraf.png
+Terminal=false
+StartupNotify=false
+Categories=Game;Simulation;

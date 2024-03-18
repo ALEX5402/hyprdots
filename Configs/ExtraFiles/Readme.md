@@ -1,0 +1,1 @@
+## Copy these files into /usr/shere/application directory manually if you use these applications  ( it helps to better wayland support these are my personal files if you don't need these please ignore this )
