@@ -55,7 +55,11 @@ cd ~
 git clone --depth 1 https://github.com/alex5402/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts
 ./install.sh
+
+## Optional
 ```
+```./themepatcher.sh "Synth-Wave" "https://github.com/ALEX5402/Synth-Wave-theme/tree/Synth-Wave" "robbowen.synthwave-vscode~SynthWave '84"
+``
 
 > [!TIP]
 > You can also create your own list (for ex. `custom_apps.lst`) with all your favorite apps and pass the file as a parameter to install it -
