@@ -55,10 +55,7 @@ cd ~
 git clone --depth 1 https://github.com/alex5402/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts
 ./install.sh
-<<<<<<< HEAD
-=======
 ```
->>>>>>> parent of 4d1144d (Update README.md)
 
 > [!TIP]
 > You can also create your own list (for ex. `custom_apps.lst`) with all your favorite apps and pass the file as a parameter to install it -
