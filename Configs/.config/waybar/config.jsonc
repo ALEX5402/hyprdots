@@ -48,7 +48,7 @@
     },
 
     "custom/cpuinfo": {
-        "exec": " /home/alex/.config/hyprdots/scripts/cpuinfo.sh",
+        "exec": " ~/.config/hyprdots/scripts/cpuinfo.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -58,18 +58,18 @@
     },
 
     "custom/gpuinfo": {
-        "exec": " /home/alex/.config/hyprdots/scripts/gpuinfo.sh",
+        "exec": " ~/.config/hyprdots/scripts/gpuinfo.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
         "interval": 5, // once every 5 seconds
         "tooltip": true,
         "max-length": 1000,
-        "on-click": "/home/alex/.config/hyprdots/scripts/gpuinfo.sh --toggle",
+        "on-click": "~/.config/hyprdots/scripts/gpuinfo.sh --toggle",
     },
 
     "custom/gpuinfo#nvidia": {
-        "exec": " /home/alex/.config/hyprdots/scripts/gpuinfo.sh --use nvidia ",
+        "exec": " ~/.config/hyprdots/scripts/gpuinfo.sh --use nvidia ",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -79,7 +79,7 @@
     },
 
     "custom/gpuinfo#amd": {
-        "exec": " /home/alex/.config/hyprdots/scripts/gpuinfo.sh --use amd ",
+        "exec": " ~/.config/hyprdots/scripts/gpuinfo.sh --use amd ",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -89,7 +89,7 @@
     },
 
     "custom/gpuinfo#intel": {
-        "exec": " /home/alex/.config/hyprdots/scripts/gpuinfo.sh --use intel ",
+        "exec": " ~/.config/hyprdots/scripts/gpuinfo.sh --use intel ",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -101,7 +101,7 @@
       "custom/weather": {
 			"format": "{}",
 			"interval": 10,
-			"exec": "/home/alex/.config/hyprdots/scripts/weather.sh",
+			"exec": "~/.config/hyprdots/scripts/weather.sh",
 			"tooltip": false
         },
     "mpris": {
@@ -224,9 +224,9 @@
         "rotate": 0,
         "format-muted": "婢",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "/home/alex/.config/hyprdots/scripts/volumecontrol.sh -o m",
-        "on-scroll-up": "/home/alex/.config/hyprdots/scripts/volumecontrol.sh -o i",
-        "on-scroll-down": "/home/alex/.config/hyprdots/scripts/volumecontrol.sh -o d",
+        "on-click-middle": "~/.config/hyprdots/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "~/.config/hyprdots/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "~/.config/hyprdots/scripts/volumecontrol.sh -o d",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -246,19 +246,19 @@
         "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
-        "on-click-middle": "/home/alex/.config/hyprdots/scripts/volumecontrol.sh -i m",
-        "on-scroll-up": "/home/alex/.config/hyprdots/scripts/volumecontrol.sh -i i",
-        "on-scroll-down": "/home/alex/.config/hyprdots/scripts/volumecontrol.sh -i d",
+        "on-click-middle": "~/.config/hyprdots/scripts/volumecontrol.sh -i m",
+        "on-scroll-up": "~/.config/hyprdots/scripts/volumecontrol.sh -i i",
+        "on-scroll-down": "~/.config/hyprdots/scripts/volumecontrol.sh -i d",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
     },
 
     "custom/updates": {
-        "exec": "/home/alex/.config/hyprdots/scripts/systemupdate.sh",
+        "exec": "~/.config/hyprdots/scripts/systemupdate.sh",
         "return-type": "json",
         "format": "󰮯 {}",
         "rotate": 0,
-        "on-click": "/home/alex/.config/hyprdots/scripts/systemupdate.sh up",
+        "on-click": "~/.config/hyprdots/scripts/systemupdate.sh up",
         "interval": 86400, // once every day
         "tooltip": true,
     },
@@ -266,7 +266,7 @@
 "custom/keybindhint": {
     "format": " ",
     "rotate": 0,
-    "on-click": "/home/alex/.config/hyprdots/scripts/keybinds_hint.sh"
+    "on-click": "~/.config/hyprdots/scripts/keybinds_hint.sh"
 },    "tray": {
         "icon-size": 18,
         "rotate": 0,
@@ -291,9 +291,9 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "/home/alex/.config/hyprdots/scripts/swwwallpaper.sh -n",
-        "on-click-right": "/home/alex/.config/hyprdots/scripts/swwwallpaper.sh -p",
-        "on-click-middle": "sleep 0.1 && /home/alex/.config/hyprdots/scripts/swwwallselect.sh",
+        "on-click": "~/.config/hyprdots/scripts/swwwallpaper.sh -n",
+        "on-click-right": "~/.config/hyprdots/scripts/swwwallpaper.sh -p",
+        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/swwwallselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -302,9 +302,9 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "/home/alex/.config/hyprdots/scripts/themeswitch.sh -n",
-        "on-click-right": "/home/alex/.config/hyprdots/scripts/themeswitch.sh -p",
-        "on-click-middle": "sleep 0.1 && /home/alex/.config/hyprdots/scripts/themeselect.sh",
+        "on-click": "~/.config/hyprdots/scripts/themeswitch.sh -n",
+        "on-click-right": "~/.config/hyprdots/scripts/themeswitch.sh -p",
+        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/themeselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -313,9 +313,9 @@
         "format": "{}", //    //
         "rotate": 0,
         "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "/home/alex/.config/hyprdots/scripts/wbarconfgen.sh n",
-        "on-click-right": "/home/alex/.config/hyprdots/scripts/wbarconfgen.sh p",
-        "on-click-middle": "sleep 0.1 && /home/alex/.config/hyprdots/scripts/quickapps.sh kitty firefox spotify code dolphin",
+        "on-click": "~/.config/hyprdots/scripts/wbarconfgen.sh n",
+        "on-click-right": "~/.config/hyprdots/scripts/wbarconfgen.sh p",
+        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/quickapps.sh kitty firefox spotify code dolphin",
         "interval" : 86400,
         "tooltip": true
     },
@@ -324,9 +324,9 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰅇 clipboard history",
-        "on-click": "sleep 0.1 && /home/alex/.config/hyprdots/scripts/cliphist.sh c",
-        "on-click-right": "sleep 0.1 && /home/alex/.config/hyprdots/scripts/cliphist.sh d",
-        "on-click-middle": "sleep 0.1 && /home/alex/.config/hyprdots/scripts/cliphist.sh w",
+        "on-click": "sleep 0.1 && ~/.config/hyprdots/scripts/cliphist.sh c",
+        "on-click-right": "sleep 0.1 && ~/.config/hyprdots/scripts/cliphist.sh d",
+        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/cliphist.sh w",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -335,7 +335,7 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
-        "on-click": "/home/alex/.config/hyprdots/scripts/logoutlaunch.sh 2",
+        "on-click": "~/.config/hyprdots/scripts/logoutlaunch.sh 2",
         "interval" : 86400, // once every day
         "tooltip": true
     },
