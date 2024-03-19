@@ -82,7 +82,8 @@ git pull
 
 ## Optional
 
-```./themepatcher.sh "Synth-Wave" "https://github.com/ALEX5402/Synth-Wave-theme/tree/Synth-Wave" "robbowen.synthwave-vscode~SynthWave '84"
+```
+./themepatcher.sh "Synth-Wave" "https://github.com/ALEX5402/Synth-Wave-theme/tree/Synth-Wave" "robbowen.synthwave-vscode~SynthWave '84"
 ```
 
 <div align = right> <br><br>
