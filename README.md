@@ -79,8 +79,12 @@ git pull
 > This backs up and overwrites all configs as setup by `restore_cfg.lst` in ~/Hyprdots/Scripts.
 > So please note that any configurations you made may be overwritten if listed to be done so, but can be recovered in ~/.config/cfg_backups.
 
+## Addons
 
-## Optional
+[Synth-Wave-theme](https://github.com/ALEX5402/Synth-Wave-theme)
+
+
+## Optional Addons Example
 
 ```
 ./themepatcher.sh "Synth-Wave" "https://github.com/ALEX5402/Synth-Wave-theme/tree/Synth-Wave" "robbowen.synthwave-vscode~SynthWave '84"
@@ -219,8 +223,4 @@ To create your own custom theme, please refer [theming wiki](https://github.com/
 
 </td></tr></table>
 
-## Addons
-
-[Synth-Wave-theme](https://github.com/ALEX5402/Synth-Wave-theme)
- 
 
