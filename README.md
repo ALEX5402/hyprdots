@@ -213,7 +213,7 @@ To create your own custom theme, please refer [theming wiki](https://github.com/
 
 ## Keybindings
 
-[Keybinds](https://raw.githubusercontent.com/ALEX5402/hyprdots/main/Configs/.config/hypr/keybindings.conf)
+[Keybinds](https://github.com/ALEX5402/hyprdots/blob/main/Configs/.config/hypr/keybindings.conf)
 
 ## Youtube
 
