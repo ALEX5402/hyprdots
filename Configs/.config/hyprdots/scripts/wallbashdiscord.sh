@@ -1,12 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # source variables
 ScrDir=`dirname "$(realpath "$0")"`
 source $ScrDir/globalcontrol.sh
-
 discord_col="${cacheDir}/discord.css"
-
 declare -a client_list=()
+
 # List more clients
 client_list+=("$HOME/.config/vesktop/settings/quickCss.css")
 client_list+=("$HOME/.var/app/dev.vencord.Vesktop/config/vesktop/settings/quickCss.css")

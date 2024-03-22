@@ -98,4 +98,3 @@ export -f fn_wallbash
 # exec wallbash fn in parallel
 
 find "${WallbashDir}" -type f -name "*.dcol" | parallel -j 0 fn_wallbash
-
