@@ -42,3 +42,4 @@ if [ ! -z "${RofiSel}" ] ; then
     "${ScrDir}/swwwallpaper.sh" -s "${wallPath}/${RofiSel}"
     notify-send -a "t1" -i "${cacheDir}/${gtkTheme}/${RofiSel}" " ${RofiSel}"
 fi
+

@@ -26,3 +26,4 @@ for client_css in "${client_list[@]}" ; do
         > "${client_css}"
     fi
 done
+

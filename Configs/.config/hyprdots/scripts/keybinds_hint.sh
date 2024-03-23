@@ -94,8 +94,8 @@ include "hyprdots-keybinds";
     "64": " ",  #? SUPER  󰻀
 #    "32" : "ERROR:32",  #* Dont know
 #    "16": "Err:16",      #* Dont know
-    "8": "ALT",
-    "4": "CTRL",
+    "8": "ALT", 
+    "4": "CTRL", 
 #!    "2":  "SHIFT",  # Wrong dunno yet
     "1": "SHIFT",
     "0": " ",
@@ -138,7 +138,7 @@ include "hyprdots-keybinds";
     "workspace" : "Navigate Workspace",
     "movetoworkspace" : "Navigate Workspace",
     "movetoworkspacesilent" : "Navigate Workspace",
-
+    
 
   };
 def arg_mapping: { #! Do not Change this used for Demo only... As this will change .args! will be fatal
@@ -183,9 +183,9 @@ def arg_mapping: { #! Do not Change this used for Demo only... As this will chan
     else
       .
     end;
-  .[] |
-
-.dispatcher as $dispatcher | .description = $dispatcher |
+  .[] | 
+  
+.dispatcher as $dispatcher | .description = $dispatcher |  
 .dispatcher as $dispatcher | .category = $dispatcher |
 .arg as $arg | .executables = $arg |
 
@@ -205,14 +205,14 @@ if .keybind and .keybind != " " and .keybind != "" then .keybind |= (split(" ") 
   .arg |= (arg_mapping[.] // .) |
  #!    .executables |= gsub(".sh"; "") | #? Usefull soon
 
-  .executables |= (executables_mapping[.] // .) |
-  .description |= (description_mapping[.] // .)
-
+  .executables |= (executables_mapping[.] // .) | 
+  .description |= (description_mapping[.] // .)    
+ 
 ' #? <---- There is a '   do not delete this'
 )"
 
 #? Now we have the metadata we can Group it accordingly
-GROUP() {
+GROUP() { 
   awk -F '!=!' '
   {
     category = $1
@@ -272,7 +272,7 @@ run_flg="$(echo "$run" | awk -F '!=!' '{print $8}')"
 run_sel="$(echo "$run" | awk -F '!=!' '{gsub(/^ *| *$/, "", $5); if ($5 ~ /[[:space:]]/ && $5 !~ /^[0-9]+$/ && substr($5, 1, 1) != "-") print $4, "\""$5"\""; else print $4, $5}')"
 #   echo "$run_sel" ; echo "$run_flg"
 
-#?
+#? 
 RUN() { case "$(eval "hyprctl dispatch $run_sel")" in *"Not enough arguments"*) exec $0 ;; esac }
 
 #? If flag is repeat then repeat rofi if not then just execute once
@@ -281,7 +281,7 @@ if [ -n "$run_sel" ] && [ "$(echo "$run_sel" | wc -l)" -eq 1 ]; then
     if [ "$repeat" = true ]; then
 
 while true; do
-    repeat_command=$(echo -e "Repeat" | rofi -dmenu -no-custom -p "[Enter] repeat; [ESC] exit") #? Needed a separate Rasi ? Dunno how to make; Maybe Something like comfirmation rasi for buttons Yes and No then the -p will be the Question like Proceed? Repeat?
+    repeat_command=$(echo -e "Repeat" | rofi -dmenu -no-custom -p "[Enter] repeat; [ESC] exit") #? Needed a separate Rasi ? Dunno how to make; Maybe Something like comfirmation rasi for buttons Yes and No then the -p will be the Question like Proceed? Repeat? 
 
     if [ "$repeat_command" = "Repeat" ]; then
         # Repeat the command here
@@ -292,5 +292,5 @@ while true; do
 done
     else RUN
     fi
-else  exec $0
+else  exec $0 
 fi
