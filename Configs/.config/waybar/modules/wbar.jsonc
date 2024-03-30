@@ -4,7 +4,6 @@
         "exec": "echo ; echo  switch bar //  dock",
         "on-click": "${ScrDir}/wbarconfgen.sh n",
         "on-click-right": "${ScrDir}/wbarconfgen.sh p",
-        "on-click-middle": "sleep 0.1 && ${ScrDir}/quickapps.sh kitty firefox spotify code dolphin",
         "interval" : 86400,
         "tooltip": true
     },

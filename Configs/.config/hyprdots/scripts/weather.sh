@@ -1,75 +1,118 @@
-#!/bin/sh
+#!/usr/bin/env python
 
-get_icon() {
-    case $1 in
-        # Icons for weather-icons
-        01d) icon="";;
-        01n) icon="";;
-        02d) icon="󰖕";;
-        02n) icon="󰖕";;
-        03*) icon="󰖐";;
-        04*) icon="󰖐";;
-        09d) icon="󰖖";;
-        09n) icon="󰖖";;
-        10d) icon="󰼳";;
-        10n) icon="󰼳";;
-        11d) icon="󰙾";;
-        11n) icon="󰙾";;
-        13d) icon="󰖘";;
-        13n) icon="󰖘";;
-        50d) icon="󰖑";;
-        50n) icon="󰖑";;
-        *) icon="";
+import json
+import requests
+from datetime import datetime
 
-        # Icons for Font Awesome 5 Pro
-        #01d) icon="";;
-        #01n) icon="";;
-        #02d) icon="";;
-        #02n) icon="";;
-        #03d) icon="";;
-        #03n) icon="";;
-        #04*) icon="";;
-        #09*) icon="";;
-        #10d) icon="";;
-        #10n) icon="";;
-        #11*) icon="";;
-        #13*) icon="";;
-        #50*) icon="";;
-        #*) icon="";
-    esac
-
-    echo $icon
+WEATHER_CODES = {
+    '113': '☀️',
+    '116': '⛅',
+    '119': '☁️',
+    '122': '☁️',
+    '143': '☁️',
+    '176': '🌧️',
+    '179': '🌧️',
+    '182': '🌧️',
+    '185': '🌧️',
+    '200': '⛈️',
+    '227': '🌨️',
+    '230': '🌨️',
+    '248': '☁️',
+    '260': '☁️',
+    '263': '🌧️',
+    '266': '🌧️',
+    '281': '🌧️',
+    '284': '🌧️',
+    '293': '🌧️',
+    '296': '🌧️',
+    '299': '🌧️',
+    '302': '🌧️',
+    '305': '🌧️',
+    '308': '🌧️',
+    '311': '🌧️',
+    '314': '🌧️',
+    '317': '🌧️',
+    '320': '🌨️',
+    '323': '🌨️',
+    '326': '🌨️',
+    '329': '❄️ ',
+    '332': '❄️ ',
+    '335': '❄️ ',
+    '338': '❄️ ',
+    '350': '🌧️',
+    '353': '🌧️',
+    '356': '🌧️',
+    '359': '🌧️',
+    '362': '🌧️',
+    '365': '🌧️',
+    '368': '🌧️',
+    '371': '❄️',
+    '374': '🌨️',
+    '377': '🌨️',
+    '386': '🌨️',
+    '389': '🌨️',
+    '392': '🌧️',
+    '395': '❄️ '
 }
 
-KEY="579ec31d9ad1fa89b509b375cf5beeea"
-CITY="Kolkata"
-UNITS="metric"
-SYMBOL="°"
+data = {}
+weather = requests.get("https://wttr.in/Kolkata?format=j1").json()
+#change the kolkata with your city name
 
-API="https://api.openweathermap.org/data/2.5"
+def format_time(time):
+    return time.replace("00", "").zfill(2)
 
-if [ -n "$CITY" ]; then
-    if [ "$CITY" -eq "$CITY" ] 2>/dev/null; then
-        CITY_PARAM="id=$CITY"
-    else
-        CITY_PARAM="q=$CITY"
-    fi
 
-    weather=$(curl -sf "$API/weather?appid=$KEY&$CITY_PARAM&units=$UNITS")
-else
-    location=$(curl -sf https://location.services.mozilla.com/v1/geolocate?key=geoclue)
+def format_temp(temp):
+    return (hour['FeelsLikeC']+"°").ljust(3)
 
-    if [ -n "$location" ]; then
-        location_lat="$(echo "$location" | jq '.location.lat')"
-        location_lon="$(echo "$location" | jq '.location.lng')"
 
-        weather=$(curl -sf "$API/weather?appid=$KEY&lat=$location_lat&lon=$location_lon&units=$UNITS")
-    fi
-fi
+def format_chances(hour):
+    chances = {
+        "chanceoffog": "Fog",
+        "chanceoffrost": "Frost",
+        "chanceofovercast": "Overcast",
+        "chanceofrain": "Rain",
+        "chanceofsnow": "Snow",
+        "chanceofsunshine": "Sunshine",
+        "chanceofthunder": "Thunder",
+        "chanceofwindy": "Wind"
+    }
 
-if [ -n "$weather" ]; then
-    weather_temp=$(echo "$weather" | jq ".main.temp" | cut -d "." -f 1)
-    weather_icon=$(echo "$weather" | jq -r ".weather[0].icon")
+    conditions = []
+    for event in chances.keys():
+        if int(hour[event]) > 0:
+            conditions.append(chances[event]+" "+hour[event]+"%")
+    return ", ".join(conditions)
 
-    echo "$(get_icon "$weather_icon")" "$weather_temp$SYMBOL"
-fi
+tempint = int(weather['current_condition'][0]['temp_C'])
+extrachar = ''
+if tempint > 0 and tempint < 10:
+    extrachar = '+'
+
+
+data['text'] = ' '+WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
+    " "+extrachar+weather['current_condition'][0]['temp_C']+"°"
+
+data['tooltip'] = f"<b>{WEATHER_CODES[weather['current_condition'][0]['weatherCode']]}{weather['current_condition'][0]['weatherDesc'][0]['value']}</b>\n" 
+data['tooltip'] +=f" Temperature: {weather['current_condition'][0]['temp_C']}°\n"
+data['tooltip'] += f" Feels like: {weather['current_condition'][0]['FeelsLikeC']}°\n"
+data['tooltip'] += f" Wind: {weather['current_condition'][0]['windspeedKmph']}Km/h\n"
+data['tooltip'] += f" Humidity: {weather['current_condition'][0]['humidity']}%\n"
+for i, day in enumerate(weather['weather']):
+    data['tooltip'] += f"\n<b>"
+    if i == 0:
+        data['tooltip'] += "Today, "
+    if i == 1:
+        data['tooltip'] += "Tomorrow, "
+    data['tooltip'] += f"{day['date']}</b>\n"
+    data['tooltip'] += f"⬆️ {day['maxtempC']}° ⬇️ {day['mintempC']}° "
+    data['tooltip'] += f"🌅 {day['astronomy'][0]['sunrise']} 🌇 {day['astronomy'][0]['sunset']}\n"
+    for hour in day['hourly']:
+        if i == 0:
+            if int(format_time(hour['time'])) < datetime.now().hour-2:
+                continue
+        data['tooltip'] += f"{format_time(hour['time'])} {WEATHER_CODES[hour['weatherCode']]} {format_temp(hour['FeelsLikeC'])} {hour['weatherDesc'][0]['value']}, {format_chances(hour)}\n"
+
+
+print(json.dumps(data))
