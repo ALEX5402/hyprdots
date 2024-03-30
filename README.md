@@ -9,6 +9,8 @@
 &ensp;[<kbd> <br> Wiki <br> </kbd>](https://github.com/alex5402/hyprdots/wiki)&ensp;
 <br><br><br><br></div>
 
+![image](https://github.com/ALEX5402/hyprdots/assets/76860596/bcd3c594-b548-4208-a728-6276f97ed617)
+![image](https://github.com/ALEX5402/hyprdots/assets/76860596/a60c626b-9d53-49ca-a296-3a6843972413)
 ![image](https://github.com/ALEX5402/hyprdots/assets/76860596/d5d718e2-fdec-4750-a0e0-29b1c374d33d)
 ![image](https://github.com/ALEX5402/hyprdots/assets/76860596/e7dbde4e-af5b-4ff0-9230-22a53ba842e1)
 
