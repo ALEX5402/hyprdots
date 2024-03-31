@@ -2,7 +2,7 @@
       "custom/weather": {
           "tooltip": true,
           "format": "{}",
-          "interval": 60,
+          "interval": 100,
           "exec": "${ScrDir}/weather.sh",
           "return-type": "json"
         },
