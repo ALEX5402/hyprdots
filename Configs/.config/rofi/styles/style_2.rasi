@@ -17,21 +17,23 @@ configuration {
 
 // Main //
 window {
-    height:                      35em;
-    width:                       56em;
+    height:                      600px;
+    width:                       900px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
     cursor:                      "default";
-    spacing:                     0em;
-    padding:                     0em;
+    spacing:                     0px;
+    padding:                     0px;
+    border:                      2px;
+    border-radius:               40px;
     border-color:                @main-br;
-    background-color:            @main-bg;
+    background-color:            transparent;
 }
 mainbox {
     enabled:                     true;
-    spacing:                     0em;
-    padding:                     0em;
+    spacing:                     0px;
+    padding:                     0px;
     orientation:                 vertical;
     children:                    [ "inputbar" , "listbox" ];
     background-color:            transparent;
@@ -42,17 +44,17 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
-    spacing:                     0em;
-    padding:                     5em;
+    spacing:                     0px;
+    padding:                     80px;
     children:                    [ "entry" ];
-    background-color:            transparent;
+    background-color:            @main-bg;
     background-image:            url("~/.config/swww/wall.rofi", width);
 }
 entry {
-    border-radius:               2em;
+    border-radius:               30px;
     enabled:                     true;
-    spacing:                     1em;
-    padding:                     1em;
+    spacing:                     0px;
+    padding:                     20px;
     text-color:                  @main-fg;
     background-color:            @main-bg;
 }
@@ -60,18 +62,17 @@ entry {
 
 // Lists //
 listbox {
-    padding:                     0em;
-    spacing:                     0em;
+    padding:                     30px;
+    spacing:                     0px;
     orientation:                 horizontal;
     children:                    [ "listview" , "mode-switcher" ];
     background-color:            @main-bg;
 }
 listview {
-    padding:                     1.5em;
-    spacing:                     0.5em;
+    padding:                     10px;
+    spacing:                     10px;
     enabled:                     true;
     columns:                     2;
-    lines:                       3;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -83,22 +84,19 @@ listview {
     background-color:            transparent;
     text-color:                  @main-fg;
 }
-
-
-// Modes //
 mode-switcher {
     orientation:                 vertical;
-    width:                       6.6em;
+    width:                       95px;
     enabled:                     true;
-    padding:                     1.5em;
-    spacing:                     1.5em;
+    padding:                     15px;
+    spacing:                     10px;
     background-color:            transparent;
 }
 button {
     cursor:                      pointer;
     vertical-align:              0.50;
     horizontal-align:            0.45;
-    border-radius:               2em;
+    border-radius:               50px;
     background-color:            @main-bg;
     text-color:                  @main-fg;
 }
@@ -111,8 +109,9 @@ button selected {
 // Elements //
 element {
     enabled:                     true;
-    spacing:                     0em;
-    padding:                     0.5em;
+    spacing:                     20px;
+    padding:                     9px;
+    border-radius:               25px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -127,7 +126,7 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        3em;
+    size:                        47px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;

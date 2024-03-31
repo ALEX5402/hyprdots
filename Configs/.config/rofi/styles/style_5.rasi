@@ -17,24 +17,27 @@ configuration {
 
 // Main //
 window {
-    height:                      31em;
-    width:                       50em;
+    height:                      500px;
+    width:                       800px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
     cursor:                      "default";
-    spacing:                     0em;
-    padding:                     0em;
+    spacing:                     0px;
+    padding:                     0px;
+    border:                      2px;
+    border-radius:               40px;
     border-color:                @main-br;
-    background-color:            @main-bg;
+    background-color:            transparent;
 }
 mainbox {
     enabled:                     true;
-    spacing:                     0em;
-    padding:                     0em;
+    spacing:                     0px;
+    padding:                     0px;
     orientation:                 vertical;
     children:                    [ "inputbar" , "listbox" , "mode-switcher" ];
     background-color:            transparent;
+    background-image:            url("~/.config/swww/wall.blur", height);
 }
 
 
@@ -50,16 +53,15 @@ entry {
 
 // Lists //
 listbox {
-    padding:                     0em;
-    spacing:                     0em;
+    padding:                     0px;
+    spacing:                     0px;
     orientation:                 horizontal;
     children:                    [ "listview" ];
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.blur", width);
 }
 listview {
-    padding:                     2em;
-    spacing:                     1em;
+    padding:                     30px;
+    spacing:                     10px;
     enabled:                     true;
     columns:                     5;
     cycle:                       true;
@@ -79,17 +81,16 @@ listview {
 mode-switcher {
     orientation:                 horizontal;
     enabled:                     true;
-    padding:                     2em 9.8em 2em 9.8em;
-    spacing:                     2em;
+    padding:                     30px 160px 30px 160px;
+    spacing:                     50px;
     background-color:            transparent;
 }
 button {
     cursor:                      pointer;
     vertical-align:              0.50;
-    horizontal-align:            0.40;
-    padding:                     2.5em;
-    spacing:                     0em;
-    border-radius:               3em;
+    horizontal-align:            0.45;
+    padding:                     30px;
+    border-radius:               50px;
     background-color:            @main-bg;
     text-color:                  @main-fg;
 }
@@ -103,8 +104,9 @@ button selected {
 element {
     orientation:                 vertical;
     enabled:                     true;
-    spacing:                     0.2em;
-    padding:                     0.5em;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               25px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -119,7 +121,7 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        5.5em;
+    size:                        90px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
