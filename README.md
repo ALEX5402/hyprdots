@@ -49,10 +49,6 @@ After a minimal Arch install (with grub and systemd), clone and execute -
 
 ```shell
 pacman -Sy git
-git clone https://github.com/ALEX5402/Hyprdots-ctl
-cd Hyprdots-ctl
-cd aur
-makepkg -si
 cd ~
 git clone --depth 1 https://github.com/alex5402/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts
