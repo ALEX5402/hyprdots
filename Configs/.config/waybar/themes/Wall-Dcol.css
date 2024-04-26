@@ -1,7 +1,7 @@
 @define-color bar-bg rgba(0, 0, 0, 0);
-@define-color main-bg #E89E8E;
-@define-color main-fg #6B433A;
-@define-color wb-act-bg #5B6F91;
-@define-color wb-act-fg #FFD5CC;
-@define-color wb-hvr-bg #E69A9E;
-@define-color wb-hvr-fg #6B4C3A;
+@define-color main-bg #E0D5AD;
+@define-color main-fg #6B603A;
+@define-color wb-act-bg #408A8E;
+@define-color wb-act-fg #FFF4CC;
+@define-color wb-hvr-bg #E6A89A;
+@define-color wb-hvr-fg #6B3A3D;
